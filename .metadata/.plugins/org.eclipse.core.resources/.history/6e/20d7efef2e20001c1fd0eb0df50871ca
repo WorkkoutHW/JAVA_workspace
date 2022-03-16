@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Clap {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("1~99 사이의 정수를 입력하시오>>");
+		
+		int getNum = scanner.nextInt();
+		int fir_num = 0;
+		int sec_num = 0;
+		
+		fir_num = getNum / 10;
+		sec_num = getNum % 10;
+		
+		if (fir_num % 3 == 0) {
+			if (sec_num % 3 == 0)
+				System.out.print("박수짝짝");
+			else
+				System.out.print("박수짝");
+		}
+		else
+		{
+			if (sec_num % 3 == 0)
+				System.out.print("박수짝");
+			else
+				System.out.print("박수따윈 안친다!");
+		}
+		
+		scanner.close();
+		
+	}
+}
